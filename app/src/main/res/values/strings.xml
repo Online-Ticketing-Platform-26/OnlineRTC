@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Online RTC</string>
+    <string name="welcome">Hello User, \nSay goodbye to cash and change! </string>
+    <string name="Forgot"><u>Forgot Password</u></string>
 </resources>

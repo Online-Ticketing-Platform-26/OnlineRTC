@@ -19,6 +19,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -55,8 +57,10 @@ public class TKT extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         TextView user=findViewById(R.id.user);
-        user.setText("Hello, "+UserNumber.getInstance().getNumber());
+        FirebaseUser userdetails=mAuth.getCurrentUser();
+        user.setText("Hello, "+userdetails.getPhoneNumber().substring(3));
         ImageButton swap1=findViewById(R.id.swap);
         RadioButton radioLocal, radioDomestic;
         RadioGroup toggleGroup;
@@ -67,6 +71,7 @@ public class TKT extends AppCompatActivity {
         ImageButton d_edit=findViewById(R.id.dedit);
         RadioButton oneWay,twoWay;
         RadioGroup tktType;
+
 
         tktType=findViewById(R.id.tktType);
         oneWay=findViewById(R.id.onewaytkt);
@@ -219,7 +224,7 @@ public class TKT extends AppCompatActivity {
                 String[] dropdownArray1 = getResources().getStringArray(R.array.Destinations);
                 List<String> dpoints = Arrays.asList(dropdownArray1);
 
-                String User=UserNumber.getInstance().getNumber();
+                String User=userdetails.getPhoneNumber();
                 if(!User.equals("")){
                     if(autoCompleteTextView.getText().toString().equals("") || !bpoints.contains(autoCompleteTextView.getText().toString())){
                         Toast.makeText(TKT.this,"Please Select Boarding Point",Toast.LENGTH_SHORT).show();

@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Internet permission -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Permissions for Android 9 (API 28) and below -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" /> <!-- Permissions for Android 10+ (Scoped Storage) -->
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" /> <!-- Android 13+ (API 33) specific permissions -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +27,9 @@
         android:theme="@style/Theme.OnlineRTC"
         tools:targetApi="31">
         <activity
+            android:name=".OTPVERIFY"
+            android:exported="false" />
+        <activity
             android:name=".ticket_card"
             android:exported="false" />
         <activity
@@ -21,12 +38,9 @@
         <activity
             android:name=".BookedTicket"
             android:exported="false" />
-
-
         <activity
             android:name=".TKT"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -40,26 +54,6 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
-
     </application>
-    <!-- Internet permission -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-    <!-- Permissions for Android 9 (API 28) and below -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="28"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="28"/>
-
-    <!-- Permissions for Android 10+ (Scoped Storage) -->
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
-
-    <!-- Android 13+ (API 33) specific permissions -->
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
-    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
-    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
-
 
 </manifest>

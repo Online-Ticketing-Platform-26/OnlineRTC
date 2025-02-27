@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:background="#A6E3E9"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="28dp" />
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/istok_web_bold"
+            android:text="@string/welcome"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="42dp" />
+
+        <TextView
+            android:id="@+id/bypass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You can now book your tickets directly on your mobile without any inconvenience."
+            android:textColor="@color/grey" />
+
+        <Space
+            android:id="@+id/space1"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_weight="1" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="213dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:alpha="1"
+            android:background="@drawable/rounded_login_ui"
+            android:backgroundTint="@color/white"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:padding="20dp"
+            tools:ignore="ExtraText">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/istok_web_bold"
+                android:text="Username"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/mobileno"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:alpha="1"
+                android:background="@drawable/input_bg"
+                android:fontFamily="@font/istok_web"
+                android:hint="UserID or Mobile Number"
+                android:inputType="textPersonName"
+                android:maxLength="10"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/bgcolor"
+                android:textColorHint="@color/grey"
+                android:textColorLink="@color/darkbg"
+                android:textCursorDrawable="@color/black"
+                android:textSize="18dp"
+                tools:ignore="VisualLintTextFieldSize" />
+
+
+            <!--applying the tint to the password visibility toggle--><![CDATA[
+            />
+
+
+            ]]>
+
+            <EditText
+                android:id="@+id/otp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:alpha="1"
+                android:background="@drawable/input_bg"
+                android:fontFamily="@font/istok_web"
+                android:hint="000000"
+                android:maxLength="6"
+                android:inputType="textPersonName"
+                android:letterSpacing="1"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/bgcolor"
+                android:textColorHint="@color/grey"
+                android:textColorLink="@color/darkbg"
+                android:textCursorDrawable="@color/black"
+                android:textSize="18dp"
+                tools:ignore="VisualLintTextFieldSize" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/getotp1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/istok_web_bold"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:textSize="18dp"
+                android:text="Get OTP"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textColorLink="#00FFFFFF"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/login1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/istok_web_bold"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:text="Login"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textColorLink="#00FFFFFF"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/TC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/istok_web_bold"
+                android:text="By using this app, you agree to our Terms and Conditions and Privacy Policy."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

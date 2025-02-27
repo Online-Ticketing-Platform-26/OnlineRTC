@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgcolor"
+    android:backgroundTintMode="add"
+    tools:context=".TKT">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:ignore="ExtraText"><![CDATA[>
+
+        ]]>
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/istok_web_bold"
+            android:textColor="@color/black"
+            android:textSize="38dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/istok_web_bold"
+            android:text="@string/tagline"
+            android:textColor="@color/black" />
+
+        <RadioGroup
+            android:id="@+id/toggle"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/toggle_unselected"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/local"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_button"
+                android:button="@null"
+                android:checked="true"
+                android:fontFamily="@font/istok_web_bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="HYD Local"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/domestic"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_unselected"
+                android:button="@null"
+                android:fontFamily="@font/istok_web_bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Domestic Buses"
+                android:textColor="#3E676A"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_login_ui"
+            android:backgroundTint="@color/white"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/istok_web_bold"
+                android:text="Select Boarding Point"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/input_bg"
+                    android:dropDownVerticalOffset="5dp"
+                    android:dropDownSelector="@drawable/input"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/istok_web"
+                    android:hint="Search Boarding Point"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:popupBackground="@color/trans"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/bedit"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:background="@color/trans"
+                    android:foreground="@color/trans"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/edit"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    tools:visibility="visible" />
+
+            </FrameLayout>
+
+
+            <ImageButton
+                android:id="@+id/swap"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/input"
+                android:backgroundTint="@color/darkbg"
+                android:padding="2dp"
+                app:srcCompat="@android:drawable/ic_popup_sync"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-15dp"
+                android:fontFamily="@font/istok_web_bold"
+                android:text="Select Destination Point"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/input_bg"
+                    android:dropDownVerticalOffset="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/istok_web"
+                    android:hint="Search Destination Point"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:popupBackground="@color/trans"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/dedit"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/trans"
+                    android:foreground="@color/trans"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/edit"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    tools:visibility="visible" />
+
+            </FrameLayout>
+
+            <RadioGroup
+                android:id="@+id/tktType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <!-- One Way Ticket -->
+                <RadioButton
+                    android:id="@+id/onewaytkt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/twoway"
+
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Two Way Ticket -->
+                <RadioButton
+                    android:id="@+id/twowaytkt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/twoway"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="20dp"
+
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/booktkt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/istok_web_bold"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:text="Book Now"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textColorLink="#00FFFFFF"
+                android:textSize="18dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="The issued QR ticket is valid for a one-way journey and will expire upon scanning by the conductor."
+                android:textAlignment="center"
+                android:textSize="12dp"
+                tools:ignore="TextSizeCheck" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/oneway"
+            android:fontFamily="@font/istok_web_bold"
+            android:text="Your Booking History"
+            android:textAllCaps="false"
+            android:textColor="@color/darkbg"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

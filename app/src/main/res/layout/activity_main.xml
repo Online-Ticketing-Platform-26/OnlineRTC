@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
     android:background="#A6E3E9"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clickable="true"
         android:orientation="vertical"
         android:padding="20dp">
 
@@ -26,28 +28,35 @@
             android:text="@string/welcome"
             android:textAllCaps="false"
             android:textColor="#000000"
-            android:textSize="34sp" />
+            android:textSize="42dp" />
 
         <TextView
+            android:id="@+id/bypass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="You can now book your tickets directly on your mobile
-without any inconvenience."
+            android:text="You can now book your tickets directly on your mobile without any inconvenience."
             android:textColor="@color/grey" />
 
         <Space
+            android:id="@+id/space1"
             android:layout_width="match_parent"
-            android:layout_height="19dp" />
+            android:layout_height="28dp"
+            android:layout_weight="1" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="308dp"
-
+            android:layout_height="213dp"
+            android:layout_alignParentBottom="true"
             android:layout_marginStart="0dp"
             android:layout_marginEnd="0dp"
             android:alpha="1"
             android:background="@drawable/rounded_login_ui"
             android:backgroundTint="@color/white"
+            android:baselineAligned="false"
             android:orientation="vertical"
             android:padding="20dp"
             tools:ignore="ExtraText">
@@ -62,82 +71,89 @@ without any inconvenience."
                 android:textColor="@color/black" />
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/mobileno"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:alpha="1"
-                android:background="@drawable/input"
+                android:background="@drawable/input_bg"
                 android:fontFamily="@font/istok_web"
                 android:hint="UserID or Mobile Number"
-
                 android:inputType="textPersonName"
+                android:maxLength="10"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
+                android:textAlignment="center"
                 android:textColor="@color/black"
+                android:textColorHighlight="@color/bgcolor"
                 android:textColorHint="@color/grey"
+                android:textColorLink="@color/darkbg"
                 android:textCursorDrawable="@color/black"
-                android:textSize="18sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="8dp" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/istok_web_bold"
-                android:text="Password"
-                android:textColor="@color/black" />
+                android:textSize="18dp"
+                tools:ignore="VisualLintTextFieldSize" />
 
 
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_below="@id/username"
-                android:layout_centerInParent="true"
-                android:alpha="1"
-                android:background="@drawable/input"
-                android:fontFamily="@font/istok_web"
-                android:hint="Please enter your password"
-                android:inputType="textPassword"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/grey"
-                android:textCursorDrawable="@color/black" />
-
-
-            <!--applying the tint to the password visibility toggle-->
+            <!--applying the tint to the password visibility toggle--><![CDATA[
             />
 
-            <TextView
-                android:id="@+id/forgotpassword"
-                android:layout_width="match_parent"
-                android:layout_height="19dp"
-                android:layout_marginTop="2dp"
-                android:clickable="true"
-                android:fontFamily="@font/istok_web"
-                android:minHeight="48dp"
-                android:text="@string/Forgot"
-                android:textAlignment="textEnd"
-                android:textColor="@color/black"
-                tools:ignore="TouchTargetSizeCheck" />
 
+            ]]>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <EditText
+                android:id="@+id/otp"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_below="@id/password"
+                android:alpha="1"
+                android:background="@drawable/input_bg"
+                android:fontFamily="@font/istok_web"
+                android:hint="000000"
+                android:maxLength="6"
+                android:inputType="textPersonName"
+                android:letterSpacing="1"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/bgcolor"
+                android:textColorHint="@color/grey"
+                android:textColorLink="@color/darkbg"
+                android:textCursorDrawable="@color/black"
+                android:textSize="18dp"
+                tools:ignore="VisualLintTextFieldSize" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/getotp1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/button"
                 android:fontFamily="@font/istok_web_bold"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:textSize="18dp"
+                android:text="Get OTP"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textColorLink="#00FFFFFF"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/login1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/istok_web_bold"
+                android:gravity="center"
                 android:minHeight="48dp"
                 android:text="Login"
-                android:textColor="#FFF"
+                android:textSize="18dp"
+                android:textAlignment="center"
                 android:textAllCaps="false"
+                android:textColor="#FFF"
                 android:textColorLink="#00FFFFFF"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -154,36 +170,5 @@ without any inconvenience."
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="19dp" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/istok_web_bold"
-            android:textColor="@color/black"
-            android:text="Don't have an account? Create one here to get started!"
-            android:textAlignment="center"
-            android:textSize="13dp"
-            tools:ignore="TextSizeCheck" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_below="@id/password"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="15dp"
-            android:alpha="1"
-            android:background="@drawable/button"
-            android:backgroundTint="@color/darkbg"
-            android:minHeight="48dp"
-            android:text="Create Your Account"
-            android:fontFamily="@font/istok_web_bold"
-            android:textAllCaps="false"
-            android:textColor="#FFF"
-            tools:ignore="TouchTargetSizeCheck" />
-
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>

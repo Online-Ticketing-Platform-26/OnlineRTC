@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical"
+    tools:context=".BookedTicket">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tnkyou"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thank you, 0000000000"
+            android:textColor="@color/black"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Ticket booked Successfully."
+            android:textColor="@color/darkbg" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/darkbg"
+            android:layout_marginBottom="15dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/qrborder"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/qrborder"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/boardingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Boarding Point: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    app:srcCompat="@drawable/arrow" />
+
+                <TextView
+                    android:id="@+id/destinationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Destination: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/qrCodeImage"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+                <TextView
+                    android:id="@+id/fareText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fare: ₹"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tktdownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/istok_web_bold"
+                    android:text="Download QR Ticket"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/userIDText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User ID: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/istok_web_bold"
+            android:text="Click to Show Your Tickets"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/istok_web_bold"
+            android:text="Explore More Services"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backtohome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/oneway"
+            android:fontFamily="@font/istok_web_bold"
+            android:text="Back To Home"
+            android:textAllCaps="false"
+            android:textColor="@color/darkbg"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Wishing You a Happy and Safe Journey. \n #GoCashless"
+            android:textAlignment="center"
+            android:textColor="@color/darkbg" />
+
+    </LinearLayout>
+
+</RelativeLayout>

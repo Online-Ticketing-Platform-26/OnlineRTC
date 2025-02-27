@@ -9,8 +9,6 @@
         android:color="@color/white" />
     <!-- stroke for defining a border for view -->
 
-    <size
-        android:height="360dp"
-        android:width="40dp" />
+    <size android:width="40dp" />
     <!-- size element is used to define a design here height & width are same means square with some radius -->
 </shape>
